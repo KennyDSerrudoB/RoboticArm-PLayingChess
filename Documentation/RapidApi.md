@@ -1,0 +1,1 @@
+# Procedimientos de las funciones de RAPID disponibles
