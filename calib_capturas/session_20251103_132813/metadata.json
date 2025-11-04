@@ -1,0 +1,15 @@
+{
+  "camera_id": "/dev/video2",
+  "frame_size": [
+    1280,
+    720
+  ],
+  "fps_target": 30,
+  "chessboard_size": [
+    7,
+    7
+  ],
+  "square_size_mm": 40.25,
+  "created": "20251103_132813",
+  "notes": "Im\u00e1genes para calibraci\u00f3n de intr\u00ednsecos. C\u00e1mara fija."
+}

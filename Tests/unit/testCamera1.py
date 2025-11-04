@@ -9,7 +9,7 @@ CAMERA_SOURCE = "/dev/video2"      # 👉 Cambia este número (0, 1, 2...) o "/d
 # ======================================================
 
 def main():
-    print("="*60)
+    print("="*60)   
     print(f"🎥 Iniciando cámara desde fuente: {CAMERA_SOURCE}")
     print("="*60)
 

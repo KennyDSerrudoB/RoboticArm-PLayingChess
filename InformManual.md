@@ -12,3 +12,5 @@
     * testStockFish.py
     * testOpenCV.py
     
+## 3 DE NOVIEMBRE 11:43
+- 

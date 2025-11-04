@@ -1,0 +1,88 @@
+{
+  "K": [
+    [
+      494.60658526063827,
+      0.0,
+      332.08192235384774
+    ],
+    [
+      0.0,
+      505.0637426310369,
+      166.5669326626692
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "dist": [
+    -0.42471087855624984,
+    0.20365527769477906,
+    0.002275485511840863,
+    -2.0775202277237993e-05,
+    -0.07146452797979255
+  ],
+  "rms": 0.5558841067282201,
+  "error_medio_px": 0.07332201165017481,
+  "img_size": [
+    640,
+    360
+  ],
+  "imagenes_usadas": [
+    "calib_capturas/session_20251103_132813/img_0000.png",
+    "calib_capturas/session_20251103_132813/img_0001.png",
+    "calib_capturas/session_20251103_132813/img_0002.png",
+    "calib_capturas/session_20251103_132813/img_0003.png",
+    "calib_capturas/session_20251103_132813/img_0004.png",
+    "calib_capturas/session_20251103_132813/img_0005.png",
+    "calib_capturas/session_20251103_132813/img_0006.png",
+    "calib_capturas/session_20251103_132813/img_0007.png",
+    "calib_capturas/session_20251103_132813/img_0008.png",
+    "calib_capturas/session_20251103_132813/img_0009.png",
+    "calib_capturas/session_20251103_132813/img_0010.png",
+    "calib_capturas/session_20251103_132813/img_0011.png",
+    "calib_capturas/session_20251103_132813/img_0012.png",
+    "calib_capturas/session_20251103_132813/img_0013.png",
+    "calib_capturas/session_20251103_132813/img_0014.png",
+    "calib_capturas/session_20251103_132813/img_0015.png",
+    "calib_capturas/session_20251103_132813/img_0016.png",
+    "calib_capturas/session_20251103_132813/img_0017.png",
+    "calib_capturas/session_20251103_132813/img_0018.png",
+    "calib_capturas/session_20251103_132813/img_0019.png",
+    "calib_capturas/session_20251103_132813/img_0020.png",
+    "calib_capturas/session_20251103_132813/img_0021.png",
+    "calib_capturas/session_20251103_132813/img_0022.png",
+    "calib_capturas/session_20251103_132813/img_0023.png",
+    "calib_capturas/session_20251103_132813/img_0024.png",
+    "calib_capturas/session_20251103_132813/img_0025.png",
+    "calib_capturas/session_20251103_132813/img_0026.png",
+    "calib_capturas/session_20251103_132813/img_0027.png",
+    "calib_capturas/session_20251103_132813/img_0028.png",
+    "calib_capturas/session_20251103_132813/img_0029.png",
+    "calib_capturas/session_20251103_132813/img_0030.png",
+    "calib_capturas/session_20251103_132813/img_0031.png",
+    "calib_capturas/session_20251103_132813/img_0032.png",
+    "calib_capturas/session_20251103_132813/img_0033.png",
+    "calib_capturas/session_20251103_132813/img_0034.png",
+    "calib_capturas/session_20251103_132813/img_0035.png",
+    "calib_capturas/session_20251103_132813/img_0036.png",
+    "calib_capturas/session_20251103_132813/img_0037.png",
+    "calib_capturas/session_20251103_132813/img_0038.png",
+    "calib_capturas/session_20251103_132813/img_0039.png",
+    "calib_capturas/session_20251103_132813/img_0040.png",
+    "calib_capturas/session_20251103_132813/img_0041.png",
+    "calib_capturas/session_20251103_132813/img_0042.png",
+    "calib_capturas/session_20251103_132813/img_0043.png",
+    "calib_capturas/session_20251103_132813/img_0044.png",
+    "calib_capturas/session_20251103_132813/img_0045.png",
+    "calib_capturas/session_20251103_132813/img_0046.png",
+    "calib_capturas/session_20251103_132813/img_0047.png",
+    "calib_capturas/session_20251103_132813/img_0048.png",
+    "calib_capturas/session_20251103_132813/img_0049.png",
+    "calib_capturas/session_20251103_132813/img_0050.png",
+    "calib_capturas/session_20251103_132813/img_0051.png",
+    "calib_capturas/session_20251103_132813/img_0052.png",
+    "calib_capturas/session_20251103_132813/img_0053.png"
+  ]
+}
