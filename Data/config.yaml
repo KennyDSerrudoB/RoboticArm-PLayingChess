@@ -1,0 +1,15 @@
+# ===============================================
+# CONFIGURACIÓN GENERAL DEL SISTEMA DE VISIÓN Y ROBOT
+# Proyecto: ROBOTICARM-PLAYINGCHESS
+# Autores: Pablo Sebastián Andrade Castillo, Erick Gabriel ALrcón ALbornoz, Kenny Daniel Serrudo BOrja
+
+# Descripción:
+#   Este archivo almacena todos los parámetros clave
+#   para el sistema de cámara, visión, robot y rutas.
+# ===============================================
+
+info:
+  project: ROBOTICARM-PLAYINGCHESS
+  version: 0.1
+  profile: default
+  description: Configuración principal de cámara, tablero y robot ABB.

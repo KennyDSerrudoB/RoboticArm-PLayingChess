@@ -11,7 +11,7 @@
 info:
   project: ROBOTICARM-PLAYINGCHESS
   version: 0.1
-  profile: default   # puedes crear otros perfiles (lab, demo, etc.)
+  profile: default
   description: Configuración principal de cámara, tablero y robot ABB.
 
 # -----------------------
