@@ -1,0 +1,107 @@
+# ===============================================
+# CONFIGURACIÓN GENERAL DEL SISTEMA DE VISIÓN Y ROBOT
+# Proyecto: ROBOTICARM-PLAYINGCHESS
+# Autores: Pablo Sebastián Andrade Castillo, Erick Gabriel ALrcón ALbornoz, Kenny Daniel Serrudo BOrja
+
+# Descripción:
+#   Este archivo almacena todos los parámetros clave
+#   para el sistema de cámara, visión, robot y rutas.
+# ===============================================
+
+info:
+  project: ROBOTICARM-PLAYINGCHESS
+  version: 0.1
+  profile: default   # puedes crear otros perfiles (lab, demo, etc.)
+  description: Configuración principal de cámara, tablero y robot ABB.
+
+# -----------------------
+# CÁMARA
+# -----------------------
+
+camera:
+  device: "/dev/video2"   # ruta del dispositivo (Linux)
+  index: 2                # índice alternativo si lo abres por número
+  width: 1280
+  height: 720
+  fps: 30
+  autofocus: false         # evita cambios que arruinen la calibración
+  autowb: false            # desactiva auto balance de blancos
+  rotation_deg: 0          # rotación en grados si la cámara está inclinada
+
+# -----------------------
+# TABLERO DE AJEDREZ (WARP)
+# -----------------------
+board:
+  square_mm: 45.0          # longitud de una casilla en milímetros
+  warp_size: 800           # tamaño de la imagen warp (px)
+  cell_px: 100             # 800 / 8 = 100 px por casilla
+  a1_corner: "bottom_left" # posición del cuadrado a1 en la vista warp
+
+# -----------------------
+# REGIONES DE INTERÉS (ROI)
+# -----------------------
+roi:
+  margin_px: 14            # margen interno dentro de cada casilla
+  draw_debug: true         # dibujar los ROIs en modo debug
+
+# -----------------------
+# UMBRALES Y DETECCIÓN
+# -----------------------
+thresholds:
+  occ_diff_mean: 12.0      # diferencia media de luminancia con empty_warp.png
+  dark_l_mean: 105.0       # valor medio de L (Lab) para distinguir pieza oscura
+  debounce_frames: 3       # frames consecutivos para confirmar ocupación
+  morph_kernel: 3          # tamaño del kernel de suavizado o apertura
+  blur_kernel: 5           # tamaño del filtro blur previo al análisis
+
+# -----------------------
+# ROBOT ABB (COORDENADAS Y MOVIMIENTOS)
+# -----------------------
+robot:
+  z_plane: 0.0             # altura de la superficie del tablero
+  z_approach: 50.0         # altura de aproximación antes de tomar o soltar
+  speed_pick: 100          # velocidad en mm/s (según tu setup)
+  speed_place: 100
+  gripper_open: 30         # apertura del efector
+  gripper_close: 10
+  cemetery:                # posiciones donde se dejan piezas capturadas
+    white: [260.0, 600.0]
+    black: [-260.0, 600.0]
+
+# -----------------------
+# RUTAS IMPORTANTES
+# -----------------------
+paths:
+  data_dir: "data"
+  homography_img2warp: "data/H_img2warp.npy"
+  homography_warp2robot: "data/H_warp2robot.npy"
+  empty_warp: "data/empty_warp.png"
+  rois_file: "data/rois_64.txt"
+  prev_occ: "data/prev_occ.npy"
+  squares_csv: "data/casillas_robot.csv"
+  datasets:
+    intrinsics: "calib_capturas/intrinsecos"
+    extrinsics: "calib_capturas/extrinsecos"
+  logs_dir: "Logs"
+  debug_dir: "Logs/debug"
+
+# -----------------------
+# COLORES (opcional)
+# -----------------------
+colors:
+  white_piece_hsv:
+    h: [0, 180]
+    s: [0, 60]
+    v: [160, 255]
+  black_piece_hsv:
+    h: [0, 180]
+    s: [0, 255]
+    v: [0, 120]
+
+# -----------------------
+# LOGGING Y DEPURACIÓN
+# -----------------------
+logging:
+  level: "INFO"            # DEBUG / INFO / WARN / ERROR
+  save_debug_images: true
+  draw_overlay: true       # mostrar overlays visuales en cámara

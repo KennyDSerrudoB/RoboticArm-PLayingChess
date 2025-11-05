@@ -1,5 +1,5 @@
-# First example for calibrate chessboard
-
+# Codigo para formar el DataSet de los intrinsecos
+# Tablero vacio orientado en diferentes posiciones
 
 import cv2
 import numpy as np
