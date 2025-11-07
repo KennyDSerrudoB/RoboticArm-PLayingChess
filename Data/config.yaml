@@ -13,3 +13,22 @@ info:
   version: 0.1
   profile: default
   description: Configuración principal de cámara, tablero y robot ABB.
+
+
+paths:
+  data_dir: "Data"
+  logs_dir: "Logs"
+
+
+engine:
+  name: "stockfish"
+  bin: /usr/games/stockfish"   # ruta al ejecutable (puede ser absoluta o relativa)
+  options:
+    Threads: 2    # hilos del procesador
+    Hash: 128     # Memoria RAM para analisis hasta 512
+    MultiPV: 1    # Cuantas mejores variantes (1 solo la mejor jugada)
+    UCI_LimitStrength: false # true (permite ajustar elo modo humano)
+  limits:
+    time_ms: 200     # TIempo max que el motor va a usar par aanalizar en ms
+    depth: 10      # Profundidad de analisis, calculo previo de jugadas 
+    nodes: null   #  para experimentos de velocidad
