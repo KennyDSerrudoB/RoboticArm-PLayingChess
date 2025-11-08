@@ -18,17 +18,71 @@ info:
 paths:
   data_dir: "Data"
   logs_dir: "Logs"
+  debug_dir: "Logs/debug"
+  snapshots_dir: "Data/snapshots"
+  homography_img2warp: "Data/H_img2warp.npy"
+  empty_warp: "Data/empty_warp.png"
+  squares_csv: "Data/casillas_pixels.csv"
+  intrinsics_file: "Data/camera_intrinsics.npz"
+
 
 
 engine:
   name: "stockfish"
-  bin: /usr/games/stockfish"   # ruta al ejecutable (puede ser absoluta o relativa)
+  bin: "/usr/local/bin/stockfish"
   options:
-    Threads: 2    # hilos del procesador
-    Hash: 128     # Memoria RAM para analisis hasta 512
-    MultiPV: 1    # Cuantas mejores variantes (1 solo la mejor jugada)
-    UCI_LimitStrength: false # true (permite ajustar elo modo humano)
+    Threads: 2
+    Hash: 128
+    MultiPV: 1
+    UCI_LimitStrength: false
   limits:
-    time_ms: 200     # TIempo max que el motor va a usar par aanalizar en ms
-    depth: 10      # Profundidad de analisis, calculo previo de jugadas 
-    nodes: null   #  para experimentos de velocidad
+    time_ms: 200
+    depth: null
+    nodes: null
+
+camera:
+  # Selección del dispositivo (usa UNO de los dos)
+  device: "/dev/video2"          # preferido en Linux; más estable
+  index: 2                       # fallback si no usas 'device'
+
+  # Backend y formato
+  backend: "v4l2"                # "v4l2" (Linux), "any" (dejar a OpenCV decidir)
+  fourcc: "MJPG"                 # "MJPG" o "YUYV" (si tu cam lo soporta)
+
+  # Video básico
+  width: 1280
+  height: 720
+  fps: 30
+  buffer_size: 3                 # intenta reducir lag (no todas las cams lo soportan)
+  warmup_ms: 300                 # tiempo de calentamiento tras abrir
+
+  # Controles de imagen (fijos para calibración)
+  autofocus: false
+  focus: null                    # si autofocus=false y tu cam soporta foco manual (0–255 o unidad propia)
+  autowb: false
+  wb_temp: null                  # si autowb=false; ej. 4500–6500
+  auto_exposure: false
+  exposure_us: null              # en microsegundos (V4L2). Algunas cams usan escala distinta.
+  gain: null
+
+  # Orientación/post
+  flip_h: false
+  flip_v: false
+  rotate_deg: 0                  # 0/90/180/270
+
+  # Robustez
+  open_retries: 3
+  read_timeout_ms: 1000
+
+  undistort: true
+
+board:
+  warp_size: 800
+  a1_corner: top_left   # <- cámbialo aquí
+  labels_rot_deg: 270
+  edge_inset_px: 0
+  edge_inset:
+    top: 10
+    right: 24
+    bottom: 12
+    left: 10
